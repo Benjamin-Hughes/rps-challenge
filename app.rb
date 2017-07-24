@@ -10,11 +10,19 @@ class RockPaperScissors < Sinatra::Base
   end
 
   get '/multiplayer' do
-
+    erb :multiplayer
   end
 
   get '/play' do
     @player_1 = params['player_1']
+    @player_2 = params['player_2']
+    @player_1_points = 0
+    @player_2_points = 0
+    erb :play
+  end
+
+  get '/choose' do
+    @player_1_choice = params[:attack]
   end
 
   run! if app_file == $PROGRAM_NAME

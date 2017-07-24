@@ -1,1 +1,14 @@
-<h2><%= @player_1 %></h2>
+<h2><%= @player_1 %></h2><h2> Points: <%= @player_1_points %></h2><br>
+<h2><%= @player_2 %></h2><h2> Points: <%= @player_2_points %></h2><br>
+
+<form action="/choose" method="get" name="attack">
+  <select name="attack">
+    <option value="Rock">Rock</option>
+    <option value="Paper">Paper</option>
+    <option value="scissors">Scissors</option>
+  </select>
+  <input type="submit" value="Choose">
+  </form>
+
+</form>
+<script>
